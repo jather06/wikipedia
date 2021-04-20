@@ -26,3 +26,4 @@ webbrowser.open('https://en.wikipedia.org/wiki/' + (articles[-1]))
 articleorder = '\n==> '.join(articles)
 print('\n==> ' + original_input_page + '\n==> ' + articleorder)
 sleep(2)
+test
