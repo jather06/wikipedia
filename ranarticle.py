@@ -6,7 +6,7 @@ while True:
     ranarticle = requests.get('https://en.wikipedia.org/wiki/Special:Random')
     soup = BeautifulSoup(ranarticle.content, 'html.parser')
     title = soup.find(class_="firstHeading").text
-    print(f'{title} \nWil je dit lezen? (Y/n)')
+    print(f'{title} \nDo you want to read this? (Y/n)')
     ans = input('').lower()
 
     if ans == 'y':
@@ -14,5 +14,5 @@ while True:
         webbrowser.open(url)
         break
     if ans == 'n':
-        print('Jezus jij bent kieskeurig zeg. Hier heb je nog een link.\n-------------------------------')
+        print('Ah I see you\'re quite the picky one, here\'s a new link\n-------------------------------')
         continue
